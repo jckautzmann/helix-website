@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aem.live — Developer Cheatsheet</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  .sheet {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.6in 0.5in;
+  }
+
+  .masthead {
+    margin-bottom: 0.18in;
+    padding-bottom: 0.1in;
+    border-bottom: 2pt solid #1a1a1a;
+  }
+  .masthead h1 { font-size: 20pt; margin: 0 0 3pt 0; }
+  .masthead p { font-size: 10pt; color: #555; margin: 0; }
+
+  .columns {
+    column-count: 3;
+    column-gap: 0.4in;
+  }
+
+  .category {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #0b3d91;
+    border-bottom: 0.75pt solid #b9c6de;
+    margin: 0.16in 0 0.06in 0;
+    padding-bottom: 2pt;
+    break-after: avoid-column;
+    break-before: avoid-column;
+  }
+  .category:first-child { margin-top: 0; }
+
+  .entry {
+    font-size: 9.5pt;
+    line-height: 1.3;
+    margin: 0 0 0.07in 0;
+    break-inside: avoid-column;
+  }
+  .entry a {
+    font-weight: 600;
+    color: #0b5fff;
+    text-decoration: none;
+  }
+  .entry a:hover { text-decoration: underline; }
+  .entry .desc { color: #333; }
+  .entry .desc::before { content: " — "; color: #999; }
+
+  .pagefoot {
+    margin-top: 0.2in;
+    padding-top: 0.08in;
+    border-top: 0.5pt solid #ccc;
+    font-size: 8pt;
+    color: #888;
+  }
+
+  @media print {
+    .sheet { padding: 0.3in; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="masthead">
+    <h1>aem.live — Developer Cheatsheet</h1>
+    <p>Quick links to core Edge Delivery Services docs, grouped by topic. Full catalog: docs/aem-live-website/catalog-core.md</p>
+  </div>
+
+  <div class="columns">
+
+    <div class="category">1. Start Here</div>
+    <div class="entry"><a href="https://www.aem.live/docs/">Documentation</a><span class="desc">Start here: build, publish, and launch guides.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/faq">FAQ</a><span class="desc">Answers to common EDS questions across the board.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/lifecycle">Feature Lifecycle</a><span class="desc">How features move from idea to deprecated.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/slack">Slack</a><span class="desc">Dedicated Slack channels for AEM customer support.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/teams">Teams</a><span class="desc">Dedicated MS Teams channels for AEM customer support.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/tutorial">Getting Started – Developer Tutorial</a><span class="desc">Set up a new AEM project in 10–20 min.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/tutorial-from-youtube">Your Next Steps After Watching the YouTube Video</a><span class="desc">Boilerplate + Google Drive, deployed in 10–20 min.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/ue-trial">Accelerate Your Tutorial (Pre-built Environment)</a><span class="desc">Request a pre-configured AEM Sites trial environment.</span></div>
+
+    <div class="category">2. Architecture</div>
+    <div class="entry"><a href="https://www.aem.live/docs/architecture">Architecture</a><span class="desc">Composable architecture: CDN, four-layer stack, publishing flow.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/global">Global Availability</a><span class="desc">Redundant global CDNs for high availability, low latency.</span></div>
+
+    <div class="category">3. Authoring</div>
+    <div class="entry"><a href="https://www.aem.live/docs/setup-adobe-sharepoint">How to use Adobe Sharepoint</a><span class="desc">Set up an Adobe SharePoint instance as site root.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/setup-googledrive">How to use Google Drive</a><span class="desc">Configure Drive access, default or custom user.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/setup-sharepoint">How to use Sharepoint</a><span class="desc">Pick a setup path: Adobe-hosted vs. customer instance.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/setup-google-drive">Setup Google Drive as a Content Source</a><span class="desc">Connect a Drive folder + install Sidekick for preview/publish.</span></div>
+
+    <div class="category">4. AEM &amp; Universal Editor</div>
+    <div class="entry"><a href="https://www.aem.live/docs/publishing-from-authoring">How Content is Published from AEM Sites Authoring</a><span class="desc">The automated flow from UE publish to ingestion.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/component-model-definitions">Content Modeling for AEM Authoring Projects</a><span class="desc">Model default content, blocks, sections, metadata.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/ue-tutorial">Set Up AEM Sites as a Content Source</a><span class="desc">Create an AEM + Universal Editor project end to end.</span></div>
+
+    <div class="category">5. Project Anatomy</div>
+    <div class="entry"><a href="https://www.aem.live/developer/anatomy-of-a-project">The Anatomy of a Project</a><span class="desc">Repo structure, special files, config, folder conventions.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/favicon">Favicon</a><span class="desc">Add a favicon across repo, repoless, and AEM sources.</span></div>
+
+    <div class="category">6. Blocks &amp; Markup</div>
+    <div class="entry"><a href="https://www.aem.live/docs/davidsmodel">David's Model, Second Take</a><span class="desc">15 content modeling best practices for intuitive authoring.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/exploring-blocks">Exploring Blocks</a><span class="desc">How blocks are built from tables and enhanced with code.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/block-collection">Block Collection</a><span class="desc">The reusable block library: boilerplate + collection tiers.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/markup-sections-blocks">Markup, Sections, Blocks, and Auto Blocking</a><span class="desc">How markup, sections, blocks, and auto-blocking fit together.</span></div>
+
+    <div class="category">7. Content &amp; Structured Data</div>
+    <div class="entry"><a href="https://www.aem.live/docs/fragments">Fragments</a><span class="desc">Reusable content chunks, authored once, referenced everywhere.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/media">Media Assets</a><span class="desc">How images/video are delivered via the Media Bus.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/placeholders">Using Placeholders</a><span class="desc">fetchPlaceholders for strings/variables, esp. multi-language sites.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/spreadsheets">Spreadsheets and JSON</a><span class="desc">Spreadsheets become structured JSON, single- or multi-sheet.</span></div>
+
+    <div class="category">8. Metadata, SEO &amp; Search</div>
+    <div class="entry"><a href="https://www.aem.live/docs/redirects">Redirects</a><span class="desc">Manage redirects via spreadsheet, precedence, and wildcards.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/seo-geo">SEO &amp; GEO Best Practices</a><span class="desc">Rendering, site structure, and crawler/SEO guidance.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/indexing">Indexing</a><span class="desc">Maintain a page index for search, filters, feeds.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/sitemap">Sitemaps</a><span class="desc">Auto-generate sitemaps, incl. multilingual hreflang support.</span></div>
+
+    <div class="category">9. Development &amp; Performance</div>
+    <div class="entry"><a href="https://www.aem.live/docs/dev-collab-and-good-practices">Development Collaboration and Good Practices</a><span class="desc">GitHub workflow, CSS/JS standards, content-first dev.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/keeping-it-100">Keeping your Lighthouse Score 100</a><span class="desc">SSR, three-phase loading, and anti-patterns to avoid.</span></div>
+
+    <div class="category">10. Configuration &amp; APIs</div>
+    <div class="entry"><a href="https://www.aem.live/docs/config-service-setup">Setting up the Configuration Service</a><span class="desc">Aggregate config for multiple sites via REST API.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/configuration-templates">Configuration Templates</a><span class="desc">Manage configs with inheritance across sites (MSM).</span></div>
+
+    <div class="category">11. Git &amp; Environments</div>
+    <div class="entry"><a href="https://www.aem.live/docs/staging">Staging &amp; Environments</a><span class="desc">When you actually need a staging environment (rarely).</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/byo-git">Bring Your Own Git</a><span class="desc">GitHub Enterprise, Bitbucket, GitLab, Azure DevOps setup.</span></div>
+
+    <div class="category">12. Integrations</div>
+    <div class="entry"><a href="https://www.aem.live/docs/integrations">Integrations Overview</a><span class="desc">CDNs, authoring tools, martech, dev services — the map.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/forms">Forms</a><span class="desc">Document-based or WYSIWYG forms, spreadsheet-backed.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/gtm-martech-integration">Google Analytics &amp; Tag Manager Integration</a><span class="desc">GA4 + GTM setup, testing, privacy compliance.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/martech-integration">Adobe Experience Cloud Integration</a><span class="desc">WebSDK, Analytics, Target, Journey Optimizer, Tags.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/target-integration">Adobe Target Integration</a><span class="desc">WebSDK or at.js, Visual Experience Composer.</span></div>
+
+    <div class="category">13. CDN, Caching &amp; Delivery</div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-adobe-managed">Adobe Managed CDN</a><span class="desc">Prerequisites, deployment options, DNS setup.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-akamai-setup">Akamai Setup</a><span class="desc">Property Manager: origin, caching, headers, behaviors.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-cloudflare-worker-setup">Cloudflare Setup</a><span class="desc">DNS, SSL/TLS, caching rules, Workers deploy.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-cloudfront-setup">AWS CloudFront Setup</a><span class="desc">Cache/origin request policies, distribution, headers.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-fastly-setup">Fastly Setup</a><span class="desc">Domain, origin, VCL snippets, optional auth.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/byo-cdn-setup">BYO CDN Setup</a><span class="desc">Overview + vendor picks: Cloudflare, Akamai, Fastly, CloudFront.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/cdn-guide">Picking the Right CDN</a><span class="desc">Compare Fastly, Cloudflare, CloudFront, Akamai.</span></div>
+
+    <div class="category">14. Security</div>
+    <div class="entry"><a href="https://www.aem.live/docs/authentication-setup">Authentication Overview</a><span class="desc">Visitor auth + author auth via Sidekick/Admin API.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/authentication-setup-authoring">Configuring Authentication for Authors</a><span class="desc">Access statements, roles, permissions via admin service.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/authentication-setup-site">Configuring Site Authentication</a><span class="desc">Token-based auth for preview/publish via Config Service.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/security">Security Overview</a><span class="desc">Tenant isolation, encryption, rate limiting, compliance.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/authentication-setup-site-for-aem-authoring">Site Authentication for Visitors (AEM Authoring)</a><span class="desc">Token-based site auth in AEM authoring environments.</span></div>
+
+    <div class="category">15. Launch &amp; Operations</div>
+    <div class="entry"><a href="https://www.aem.live/docs/error-pages">Error Pages</a><span class="desc">Configure 404s and custom error content via fragments.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/go-live-checklist">Go-Live Checklist</a><span class="desc">Best-practice checklist before/after launch.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/operational-telemetry">Operational Telemetry</a><span class="desc">Privacy-safe telemetry for functional/perf issues.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/operations">Operations</a><span class="desc">Infra resilience, monitoring, shared responsibilities.</span></div>
+    <div class="entry"><a href="https://www.aem.live/docs/scheduling">Scheduling</a><span class="desc">Crontab-style scheduling for preview/publish/purge.</span></div>
+    <div class="entry"><a href="https://www.aem.live/developer/scheduling">Scheduled Publishing</a><span class="desc">Register org/site to enable future-dated publishing.</span></div>
+
+  </div>
+
+  <div class="pagefoot">aem.live Developer Cheatsheet · generated from docs/aem-live-website/catalog-core.md</div>
+
+</div>
+</body>
+</html>
